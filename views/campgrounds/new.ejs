@@ -1,0 +1,53 @@
+<% layout('/layouts/boilerplate') %>
+    <div class="row">
+        <h1 class="text-center">New Campground</h1>
+        <div class="col-6 offset-3">
+            <form action="/campgrounds" method="POST" novalidate class="needs-validation" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label class="form-label" for="title">Title : </label>
+                    <input class="form-control" type="text" id="title" name="campground[title]" required>
+                    <div class="valid-feedback">Awesome!</div>
+                    <div class="invalid-feedback">Just enter the name dude!</div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="location">Location : </label>
+                    <input class="form-control" type="text" id="location" name="campground[location]" required>
+                    <div class="valid-feedback">Awesome!</div>
+                    <div class="invalid-feedback">What's wrong with you</div>
+                </div>
+
+
+                <div class="mb-3">
+                    <label class="form-label" for="price">Campground Price </label>
+                    <div class="input-group">
+                        <span class="input-group-text">$</span>
+                        <input type="text" name="campground[price]" class="form-control" id="price"
+                            aria-label="Amount (to the nearest dollar)" placeholder="0.00" required>
+                        <div class="valid-feedback">Fine now!</div>
+                        <div class="invalid-feedback">Please... price :')</div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="Description">Description : </label>
+                    <textarea class="form-control" type="text" id="description" name="campground[description]"
+                        required></textarea>
+                    <div class="valid-feedback">Awesome!</div>
+                    <div class="invalid-feedback">Running it without description dummy!</div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="image">Image Url </label>
+                    <div class="mb-3">
+                        <input class="form-control" type="file" id="formFileMultiple" name="image" multiple>
+                    </div>
+                    <div class="valid-feedback">Correct you dumbass!</div>
+                    <div class="invalid-feedback">This is disguisting!</div>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-success">Add Campground</button>
+                </div>
+            </form>
+
+            <a href="/campgrounds">All Campgrounds</a>
+        </div>
+
+    </div>
